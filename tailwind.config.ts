@@ -9,8 +9,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primaryBackground: "#030516",
+        secondaryBackground: "rgb(7, 22, 38)",
+        linearBackground: "rgba(12, 38, 69, 0)",
+        linearBackground2: "rgba(7, 22, 38, 0)",
+        textColorFooter: "rgb(179, 208, 242)",
+        menuBackground: "rgb(3, 5, 22)",
+        accent: "#60a6e7",
+        darkGrey: "#aea9b1",
+        lightGrey: "#e6e0e9",
+      },
+      fontFamily: {
+        sans: ['var(--font-lexend)', 'sans-serif'],
       },
     },
   },
