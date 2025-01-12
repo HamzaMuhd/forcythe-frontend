@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Lexend } from 'next/font/google';
-import Header from "../components/Header";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/navbar";
 
 
 export const metadata: Metadata = {
@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en"  className={lexend.variable}>
       <body className="bg-primaryBackground ">
-        <Header />
+        <Navbar />
         {children}
         <Footer />
       </body>
