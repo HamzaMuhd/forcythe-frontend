@@ -3,6 +3,7 @@
 import { navLinks, socialLinks } from "@/constants";
 import Link from "next/link";
 import Image from "next/image";
+import Logo from "./logo";
 
 const Footer = () => {
   return (
@@ -35,13 +36,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:col-span-2 gap-10">
           {/* About */}
           <div className="lg:pl-14 md:col-span-2 md:pr-10">
-            <Image
-              src="/forcythe-logo.svg"
-              alt="Forcythe Logo"
-              width={130}
-              height={9}
-              className="mb-5 md:mb-8"
-            />
+            <Logo width={130} height={9} className="b-5 md:mb-8"/>
             <p className="font-sans text-base text-darkGrey font-normal leading">
               We are the growth company for businesses looking to scale. We are dedicated to
               transforming businesses with bespoke digital solutions that drive growth.

@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en"  className={lexend.variable}>
-      <body >
+      <body className="bg-primaryBackground ">
         <Header />
         {children}
         <Footer />

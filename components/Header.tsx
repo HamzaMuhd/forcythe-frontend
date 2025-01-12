@@ -4,6 +4,8 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { navLinks } from "../constants";
+import Button from "./Button";
+import Logo from "./logo";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -12,16 +14,7 @@ const Header = () => {
     <nav className="navbar w-full fixed gap-10 top-0 left-0 py-7 px-5 sm:px-5 md:px-10 lg:px-14 xl:px-28 flex justify-between items-center z-30 backdrop-blur-md">
       {/* Logo */}
       <div className="flex items-center gap-20">
-        <Link href="/">
-          <Image
-            src="forcythe-logo.svg"
-            alt="Forcythe Logo"
-            width={140}
-            height={31}
-            priority
-          />
-        </Link>
-
+        <Logo width={140} height={31} />
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-4">
           {navLinks.slice(0, 5).map((link) => (
@@ -38,12 +31,7 @@ const Header = () => {
 
       {/* Call-to-action Button */}
       <div className="hidden md:block">
-        <div className="relative w-fit group"><button className=" font-sans action-button custom-animate w-w-fit py-[12px] px-5 flex gap-2 items-center justify-center rounded-full 
-                     bg-white text-black text-base relative z-10 font-semibold hover:bg-[#064386] hover:text-white text-center whitespace-nowrap cursor-pointer hover:shadow-md ">
-          Book a Call
-        </button>
-        <div className="w-full h-full absolute top-1.5 right-1.5 z-0 rounded-full border-[1px] border-dashed group-hover:border-[#064386]"></div>
-        </div>
+        <Button text="Book a Call"/>
       </div>
 
       {/* Mobile Menu Button */}
