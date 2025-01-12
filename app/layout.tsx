@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Lexend } from 'next/font/google';
 import Footer from "@/components/Footer";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/Navbar";
 
 
 export const metadata: Metadata = {

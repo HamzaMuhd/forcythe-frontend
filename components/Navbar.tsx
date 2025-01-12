@@ -5,7 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { navLinks } from "../constants";
 import Button from "./Button";
-import Logo from "./logo";
+import Logo from "./Logo";
+import { ButtonBorder } from "./ui/moving-border";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -49,10 +50,12 @@ const Navbar = () => {
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className="absolute top-20 right-6 w-60 p-6 bg-gradient-to-t from-[#071626] via-[#071626] to-transparent rounded-2xl flex flex-col gap-4 z-40 border-0 transition duration-500">
+        
+        <div className="absolute top-20 right-6 w-60 p-6  from-[#071626] via-[#071626] to-transparent rounded-2xl flex flex-col gap-4 z-40 border-0 transition duration-500">
           {/* Radial Gradient Background */}
+          <ButtonBorder>
           <div className="absolute inset-0 z-0 rounded-[inherit] bg-gradient-radial from-[#3275f8] via-transparent to-transparent filter blur-sm"></div>
-
+          
           {/* Menu Items */}
           <div className="z-10 text-white w-full">
             <ul className="flex flex-col">
@@ -72,7 +75,9 @@ const Navbar = () => {
 
           {/* Overlay background */}
           <div className="absolute inset-0 bg-black z-1 rounded-[inherit] opacity-30"></div>
+          </ButtonBorder>
         </div>
+        
       )}
     </nav>
   );

@@ -3,7 +3,7 @@
 import { navLinks, socialLinks } from "@/constants";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "./logo";
+import Logo from "./Logo";
 
 const Footer = () => {
   return (
