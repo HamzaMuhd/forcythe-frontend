@@ -2,6 +2,7 @@
 
 import React from "react";
 import Button from "./Button";
+import TextAnimation from "./ui/text-generate-effect";
 
 const ReadyToScaleSection = () => {
   return (
@@ -14,10 +15,10 @@ const ReadyToScaleSection = () => {
       <div className="max-w-[45rem] mx-auto">
         {/* Heading */}
         <h2 className=" text-white  font-sans text-[2rem] leading-[2.5rem] sm:text-[2.2rem] sm:leading-[2.5rem] lg:text-[2.6rem] lg:leading-[3rem] mb-6">
-          <span className="font-sans text-accent">Ready to Scale?</span>
+          <span className="font-sans text-accent"> <TextAnimation text="Ready to Scale?"/></span>
           <br />
-          Join successful brands that chose us as their
-          <span className=" font-sans text-accent"> growth accelerator</span>
+          <TextAnimation text="Join successful brands that chose us as their"/>
+            <span className=" font-sans text-accent"> <TextAnimation text="growth accelerator"/> </span>
         </h2>
 
         {/* Button */}

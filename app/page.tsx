@@ -1,3 +1,4 @@
+import BlogSection from "@/components/BlogSection";
 import BtoBSection from "@/components/BtoBSection";
 import Header from "@/components/Header";
 import InfiniteScroll from "@/components/InfiniteScroll";
@@ -18,8 +19,8 @@ export default function Home() {
       <SparkToSpotlight />
       <BtoBSection />
       <StatisticsSection />
+      <BlogSection />
       <ReadyToScaleSection />
-
     </div>
   );
 }

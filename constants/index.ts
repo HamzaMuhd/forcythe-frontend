@@ -120,4 +120,29 @@ export const navLinks = [
     },
   ];
 
-  
+ export const blogs = [
+    {
+      title: "Will AI take over Art?",
+      category: "Blog",
+      author: "The Reformist",
+      date: "May 29th, 2024",
+      imgSrc: "/ai-art.webp",
+      link: "/blog/will-ai-take-over-art",
+    },
+    {
+      title: "Cryptocurrency vs Tokens",
+      category: "Blog",
+      author: "The Reformist",
+      date: "May 29th, 2024",
+      imgSrc: "/crypto-vs-tokens.webp",
+      link: "/blog/cryptocurrency-vs-tokens",
+    },
+    {
+      title: "Cryptocurrency and Crypto Asset",
+      category: "Blog",
+      author: "The Reformist",
+      date: "May 29th, 2024",
+      imgSrc: "/crypto-assets.webp",
+      link: "/blog/cryptocurrency-and-crypto-asset",
+    },
+  ];
