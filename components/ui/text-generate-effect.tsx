@@ -1,38 +1,40 @@
-"use client";
-import { useEffect } from "react";
-import { motion, stagger, useAnimate } from "framer-motion";
+'use client';
 
-export const TextGenerateEffect = ({
-  words,
-  additionalClassName = "",
-}: {
-  words: string;
-  additionalClassName?: string; // Make it optional with default value
-}) => {
-  const [scope, animate] = useAnimate();
-  const wordsArray = words.split(" ");
+import React from 'react';
+import { motion } from 'framer-motion';
 
-  useEffect(() => {
-    animate(
-      "span",
-      { opacity: 1 },
-      {
-        duration: 2,
-        delay: stagger(0.2),
-      }
-    );
-  }, [animate, wordsArray]);
+interface TextAnimationProps {
+  text: string;
+  className?: string;
+}
+
+const TextAnimation: React.FC<TextAnimationProps> = ({ text, className }) => {
+  const textVariants = {
+    hidden: { opacity: 0 },
+    visible: (index: number) => ({
+      opacity: 1,
+      transition: {
+        delay: index * 0.05,
+      },
+    }),
+  };
 
   return (
-    <motion.div ref={scope} className={`inline-block ${additionalClassName}`}>
-      {wordsArray.map((word, idx) => (
+    <span className={className} style={{ display: 'inline' }}>
+      {text.split('').map((char, index) => (
         <motion.span
-          key={word + idx}
-          className="opacity-0 inline-block"
+          key={`${char}-${index}`}
+          custom={index}
+          variants={textVariants}
+          initial="hidden"
+          animate="visible"
+          style={{ display: 'inline' }}
         >
-          {word}&nbsp;
+          {char}
         </motion.span>
       ))}
-    </motion.div>
+    </span>
   );
 };
+
+export default TextAnimation;

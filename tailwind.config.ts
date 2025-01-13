@@ -16,6 +16,7 @@ const config = {
       colors: {
         primaryBackground: "#030516",
         secondaryBackground: "rgb(7, 22, 38)",
+        successcard: "rgb(12, 38, 69)",
         linearBackground: "rgba(12, 38, 69, 0)",
         linearBackground2: "rgba(7, 22, 38, 0)",
         textColorFooter: "rgb(179, 208, 242)",

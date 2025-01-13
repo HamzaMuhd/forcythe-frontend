@@ -51,13 +51,13 @@ const Navbar = () => {
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
         
-        <div className="absolute top-20 right-6 w-60 p-6  from-[#071626] via-[#071626] to-transparent rounded-2xl flex flex-col gap-4 z-40 border-0 transition duration-500">
+        <div className="absolute top-20 right-6 w-60  rounded-3xl flex flex-col gap-4 bg-primaryBackground bg-opacity-80">
           {/* Radial Gradient Background */}
           <ButtonBorder>
-          <div className="absolute inset-0 z-0 rounded-[inherit] bg-gradient-radial from-[#3275f8] via-transparent to-transparent filter blur-sm"></div>
+          <div className="absolute inset-0 z-0 rounded-[inherit]"></div>
           
           {/* Menu Items */}
-          <div className="z-10 text-white w-full">
+          <div className="p-5 z-10 text-white w-full text-left">
             <ul className="flex flex-col">
               {navLinks.map((link) => (
                 <li key={link.href} className="w-full py-2.5">
@@ -73,8 +73,6 @@ const Navbar = () => {
             </ul>
           </div>
 
-          {/* Overlay background */}
-          <div className="absolute inset-0 bg-black z-1 rounded-[inherit] opacity-30"></div>
           </ButtonBorder>
         </div>
         

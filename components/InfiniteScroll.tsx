@@ -1,15 +1,21 @@
-"use client";
-import { imagesLinks } from "@/constants";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import React from "react";
+'use client';
+
+import { imagesLinks } from '@/constants';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import React from 'react';
+import TextAnimation from './ui/text-generate-effect';
 
 const InfiniteScroll = () => {
   return (
     <div>
       <div className="min-h-[60px]">
-        <p className="font-sans text-[2rem] leading-[2.5rem] sm:text-[2.2rem] sm:leading-[2.5rem] lg:text-[2.6rem] lg:leading-[3rem] mb-12 max-w-[90%] mx-auto text-center">
-          Success in <span className="text-accent">Motion</span> – Our clients&apos; journey
+        <p className="font-sans text-white text-[2rem] leading-[2.5rem] sm:text-[2.2rem] sm:leading-[2.5rem] lg:text-[2.6rem] lg:leading-[3rem] mb-12 max-w-[90%] mx-auto text-center">
+          <TextAnimation text="Success in" />{' '}
+          <span className="text-accent">
+            <TextAnimation text="Motion" />
+          </span>{' '}
+          <TextAnimation text="– Our clients' journey" />
         </p>
       </div>
 
@@ -17,16 +23,16 @@ const InfiniteScroll = () => {
       <div className="relative overflow-hidden z-0">
         <motion.div
           className="flex gap-5"
-          animate={{ x: ["0%", "-100%"] }} // Move to the left
+          animate={{ x: ['0%', '-100%'] }} // Move to the left
           transition={{
             x: {
               repeat: Infinity,
-              repeatType: "loop",
+              repeatType: 'loop',
               duration: 30, // Adjust speed as needed
-              ease: "linear",
+              ease: 'linear',
             },
           }}
-          style={{ display: "flex", whiteSpace: "nowrap" }}
+          style={{ display: 'flex', whiteSpace: 'nowrap' }}
         >
           {/* Duplicate images for seamless loop */}
           {[...imagesLinks, ...imagesLinks].map((src, index) => (
@@ -51,16 +57,16 @@ const InfiniteScroll = () => {
       <div className="relative mt-10 overflow-hidden z-0">
         <motion.div
           className="flex gap-5"
-          animate={{ x: ["-100%", "0%"] }} // Move to the right
+          animate={{ x: ['-100%', '0%'] }} // Move to the right
           transition={{
             x: {
               repeat: Infinity,
-              repeatType: "loop",
+              repeatType: 'loop',
               duration: 30, // Adjust speed as needed
-              ease: "linear",
+              ease: 'linear',
             },
           }}
-          style={{ display: "flex", whiteSpace: "nowrap" }}
+          style={{ display: 'flex', whiteSpace: 'nowrap' }}
         >
           {/* Duplicate images for seamless loop */}
           {[...imagesLinks, ...imagesLinks].map((src, index) => (

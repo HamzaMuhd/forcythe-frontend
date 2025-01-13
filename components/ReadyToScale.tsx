@@ -13,7 +13,7 @@ const ReadyToScaleSection = () => {
     >
       <div className="max-w-[45rem] mx-auto">
         {/* Heading */}
-        <h2 className=" font-sans text-[2rem] leading-[2.5rem] sm:text-[2.2rem] sm:leading-[2.5rem] lg:text-[2.6rem] lg:leading-[3rem] mb-6">
+        <h2 className=" text-white  font-sans text-[2rem] leading-[2.5rem] sm:text-[2.2rem] sm:leading-[2.5rem] lg:text-[2.6rem] lg:leading-[3rem] mb-6">
           <span className="font-sans text-accent">Ready to Scale?</span>
           <br />
           Join successful brands that chose us as their
